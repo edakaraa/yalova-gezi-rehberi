@@ -1,0 +1,56 @@
+footer {
+    background-color: #2d3748; /* Arka plan rengi */
+    color: #ffffff; /* Yazı rengi */
+    padding: 1.5rem; /* Üst, alt, sağ ve sol boşluklar */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Gölgelendirme */
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* İçerikleri iki tarafa yaymak için */
+    align-items: center; /* Dikey hizalamayı sağlamak için */
+}
+
+footer ul li {
+    line-height: 2.5; /* Satır yüksekliği */
+}
+
+footer .logo-container {
+    display: flex; /* Logo ve metni yan yana dizmek için */
+    align-items: center; /* Dikey hizalamak için */
+    gap: 1rem; /* Logo ve metin arasındaki boşluk */
+    margin-bottom: 1rem; /* Alt boşluk */
+}
+
+footer .section-title {
+    font-size: 1.25rem; /* Başlık font büyüklüğü */
+    font-weight: bold; /* Başlık font kalınlığı */
+    margin-bottom: 0.5rem; /* Başlık ve içerik arasındaki boşluk */
+}
+
+footer .links-container {
+    display: flex;
+    justify-content: space-between; /* Sağdaki bölümler arası boşluk için */
+    text-align: left; /* Sol hizalama */
+}
+
+footer .links-container div {
+    flex: 1; /* Her bir bölüm eşit alan kaplar */
+    text-align: left; /* Metni sola hizala */
+}
+
+footer .links-container ul {
+    list-style: none; /* Liste işaretlerini kaldır */
+    padding: 0; /* İç boşlukları kaldır */
+    margin: 0; /* Dış boşlukları kaldır */
+}
+
+footer .links-container ul li {
+    text-align: left; /* Liste elemanlarının sola hizalanmasını sağlamak için eklendi */
+    line-height: 2.5; /* Satır yüksekliği */
+}
+
+footer .links-container h3 {
+    text-align: left; /* Başlıkları sola hizala */
+}

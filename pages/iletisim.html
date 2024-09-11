@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title>
+    <link rel="stylesheet" href="/shared/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/shared/js/scripts.js" defer></script>
+    <style>
+     body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    
+    <body>
+        <div class="bg-cover min-h-screen" style="background-image: url('../images/sahil-yalova.jpeg'); background-size: cover; background-position: top;">
+            <div class="flex mt-32 container mx-auto">
+                <div class="flex mt-20 w-full">
+                    <!-- Sol Bölüm -->
+                    <div class="w-1/3 p-4 space-y-6">
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg shadow-lg">
+                            <h2 class="font-bold">Adres</h2>
+                            <p>Süleymanbey Mahallesi Cumhuriyet Caddesi Karizma İş Merkezi No:3 Kat:4 PK: 77100 YALOVA</p>
+                        </div>
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg shadow-lg">
+                            <h2 class="font-bold">Telefon</h2>
+                            <p>
+                                <a href="tel:4448777" class="box-content">444 8 777</a>
+                            </p>
+                        </div>
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg shadow-lg">
+                            <h2 class="font-bold">Mail</h2>
+                            <p>
+                                <a href="mailto:info@yalova.bel.tr" class="box-content">info@yalova.bel.tr</a>
+                                <a href="mailto:yalovabelediyesi@hs01.kep.tr" class="box-content">yalovabelediyesi@hs01.kep.tr</a>
+                            </p>
+                        </div>
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg shadow-lg">
+                            <h2 class="font-bold">Fax</h2>
+                            <p>0 226 814 14 62</p>
+                        </div>
+                    </div>
+    
+                    <!-- Sağ Bölüm: İletişim Formu -->
+                    <div class="w-2/3 p-4">
+                        <form class="bg-white bg-opacity-40 p-6 rounded-lg shadow-lg space-y-4">
+                            <h2 class="font-bold mb-4">İletişim Formu</h2>
+                            <div>
+                                <label for="email" class="block text-gray-700">E-posta</label>
+                                <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded" placeholder="E-posta adresinizi girin" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700">Mesaj</label>
+                                <textarea id="message" class="w-full p-2 border border-gray-300 rounded" rows="5" placeholder="Mesajınızı yazın" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

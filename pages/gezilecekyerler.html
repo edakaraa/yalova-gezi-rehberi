@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gezilecek Yerler</title>
+    <link rel="stylesheet" href="/shared/css/styles.css" />
+    <link rel="stylesheet" href="/shared/css/navbar.css" />
+    <link rel="stylesheet" href="/shared/css/footer.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <script src="/shared/js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="container mx-auto py-12 my-10 px-4">
+      <h1 class="text-3xl font-bold text-center mb-10">Gezilecek Yerler</h1>
+      <div
+        id="places-container"
+        class="grid grid-cols-1 sm:grid-cols-2 cursor-pointer md:grid-cols-3 lg:grid-cols-4 gap-6"
+      ></div>
+    </div>
+
+    <script>
+      // JSON verisini çekme ve gezilecek yerler kartlarını oluşturma
+      fetch("/data/gezilecekyerler-data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const placesContainer = document.getElementById("places-container");
+          data.forEach((place) => {
+            const placeCard = document.createElement("div");
+            placeCard.classList.add(
+              "bg-white",
+              "shadow-md",
+              "rounded-lg",
+              "overflow-hidden",
+              "hover:scale-105",
+              "transform",
+              "transition-all",
+              "duration-300"
+            );
+
+            placeCard.innerHTML = `
+                            <img src="${place.image[0]}" alt="${place.title}" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="font-bold text-lg">${place.title}</h2>
+                            </div>
+                      `;
+
+            placeCard.addEventListener("click", () => {
+              // Tıklanan kartın verilerini localStorage'a kaydet
+              localStorage.setItem("selectedPlace", JSON.stringify(place));
+              window.location.href = "/pages/blog-gezilecekyerler.html"; // Blog sayfasına yönlendir
+            });
+
+            placesContainer.appendChild(placeCard);
+          });
+        });
+    </script>
+  </body>
+</html>

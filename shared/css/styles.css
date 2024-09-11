@@ -1,0 +1,66 @@
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* Swiper */
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pagination Styles */
+.swiper-pagination {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 15;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.swiper-pagination-bullet {
+    background: #1a202c;
+    width: 12px;
+    height: 12px;
+    margin: 4px 0;
+}
+
+.swiper-pagination-bullet-active {
+    background: #006db9;
+}
+@media (max-width: 767px) {
+    .swiper-container {
+        height: 100vh; /* Mobil cihazlarda tam ekran yüksekliği */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .swiper-pagination {
+        left: 10px; /* Sol kenardan uzaklık */
+        top: 10px; /* Alt kenardan uzaklık */
+        transform: none; /* Transform kaldırıldı */
+        justify-content: flex-start; /* Sol tarafa hizalama */
+    }
+
+}
+
+
+
